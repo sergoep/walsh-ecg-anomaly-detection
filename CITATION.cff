@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Walsh-domain ECG Anomaly Detection: Interpretable Reference Framework"
+type: software
+authors:
+  - given-names: Sergo
+    family-names: Episkoposian
+    email: sergo.episkoposyan@polytechnic.am
+    affiliation: "National Polytechnic University of Armenia"
+keywords:
+  - Walsh-Hadamard transform
+  - ECG
+  - anomaly detection
+  - interpretable AI
+  - statistical template
+license: MIT
+repository-code: "https://github.com/sergoep/walsh-ecg-anomaly-detection"
+url: "https://github.com/sergoep/walsh-ecg-anomaly-detection"
