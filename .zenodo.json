@@ -1,0 +1,39 @@
+{
+  "title": "Walsh-Domain Reference-Based ECG Anomaly Detection: Reproducible Code and Verification Package",
+  "upload_type": "software",
+  "description": "Reference implementation and reproducibility package for the manuscript 'Interpretable ECG Anomaly Scoring in Walsh-Hadamard Coordinates: Orthogonal Invariance and Exact Time-Domain Score Decomposition'. The package verifies orthogonal invariance, exact detector-relative score decomposition, multilead max-fusion, and the associated reproducibility workflow. The synthetic verification run is intended for methodological verification and does not claim clinical validation.",
+  "creators": [
+    {
+      "name": "Episkoposian, Sergo A.",
+      "affiliation": "Faculty of Applied Mathematics and Physics, National Polytechnic University of Armenia, Yerevan, Armenia"
+    },
+    {
+      "name": "Chaltikyan, Georgi",
+      "affiliation": "Deggendorf Institute of Technology, European Campus Rottal-Inn (DIT-ECRI), Pfarrkirchen, Germany"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Walsh-Hadamard transform",
+    "ECG anomaly scoring",
+    "orthogonal invariance",
+    "Mahalanobis distance",
+    "signal processing",
+    "reproducibility",
+    "interpretable anomaly detection"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.18135574",
+      "relation": "isVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.21179510",
+      "relation": "isIdenticalTo",
+      "scheme": "doi"
+    }
+  ],
+  "version": "v3",
+  "publication_date": "2026-07-03"
+}
