@@ -6,7 +6,9 @@ Reference implementation for the manuscript:
 
 Authors: **Sergo A. Episkoposian** and **Georgi Chaltikyan**
 
-Archived software DOI: **https://doi.org/10.5281/zenodo.18135575**
+Latest archived software DOI: https://doi.org/10.5281/zenodo.18135574
+
+Version used for the SaSiDa manuscript: https://doi.org/10.5281/zenodo.21179510
 
 This repository contains a compact, reproducible implementation of the mathematical pipeline used in the SaSiDa submission version of the article. The default script uses a fast synthetic ECG-like dataset so that the code can be run quickly in Google Colab or locally.
 
@@ -108,9 +110,15 @@ The file `src/ecg_walsh/ptbxl_hook.py` contains a minimal WFDB example for readi
 
 ## Zenodo
 
-A Zenodo record already exists for this project:
+A Zenodo record already exists for this project.
 
-**https://doi.org/10.5281/zenodo.18135575**
+Latest all-versions DOI:
+
+https://doi.org/10.5281/zenodo.18135574
+
+Version 3 DOI, corresponding to the current SaSiDa manuscript package:
+
+https://doi.org/10.5281/zenodo.21179510
 
 For updates, do **not** create a separate new Zenodo project. Use the existing Zenodo record and create a **New version** if you need to archive an updated GitHub package. The manuscript should cite the archived version that exactly matches the reported code and generated results.
 
