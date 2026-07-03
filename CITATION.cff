@@ -1,18 +1,25 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
-title: "Walsh-domain ECG Anomaly Detection: Interpretable Reference Framework"
+title: "Interpretable ECG Anomaly Scoring in Walsh-Hadamard Coordinates: Orthogonal Invariance and Exact Time-Domain Score Decomposition"
+message: "If you use this software, please cite the archived Zenodo release and the associated manuscript."
 type: software
 authors:
-  - given-names: Sergo
-    family-names: Episkoposian
-    email: sergo.episkoposyan@polytechnic.am
-    affiliation: "National Polytechnic University of Armenia"
+  - family-names: Episkoposian
+    given-names: Sergo A.
+  - family-names: Chaltikyan
+    given-names: Georgi
+abstract: "Reference implementation for interpretable ECG anomaly scoring in sequency-ordered Walsh-Hadamard coordinates, including orthogonal-invariance and exact-decomposition verification."
+repository-code: "https://github.com/sergoep/ecg-walsh-hadamard-sasida"
+repository-artifact: "https://doi.org/10.5281/zenodo.18135575"
+doi: 10.5281/zenodo.18135575
+license: MIT
+version: "1.0.1"
+date-released: "2026-07-03"
 keywords:
   - Walsh-Hadamard transform
   - ECG
-  - anomaly detection
-  - interpretable AI
-  - statistical template
-license: MIT
-repository-code: "https://github.com/sergoep/walsh-ecg-anomaly-detection"
-url: "https://github.com/sergoep/walsh-ecg-anomaly-detection"
+  - anomaly scoring
+  - Mahalanobis distance
+  - interpretable signal processing
+  - orthogonal invariance
+  - exact decomposition
+  - reproducibility

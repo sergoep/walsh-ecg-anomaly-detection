@@ -1,0 +1,24 @@
+{
+  "title": "Interpretable ECG Anomaly Scoring in Walsh-Hadamard Coordinates",
+  "article_version": "SaSiDa final compact version",
+  "description": "Fast Colab reproducibility demo for the final SaSiDa manuscript.",
+  "seed": 20260703,
+  "fs": 100,
+  "window_length_N": 128,
+  "hop": 64,
+  "overlap": "50%",
+  "delta": 0.01,
+  "alpha": 0.05,
+  "n_leads": 3,
+  "record_seconds": 12,
+  "n_train_healthy": 36,
+  "n_val_healthy": 12,
+  "n_test_healthy": 20,
+  "n_test_abnormal": 20,
+  "created_at": "2026-07-03T07:18:33.223683Z",
+  "main_checks": {
+    "orthogonal_invariance": "Walsh full-covariance score equals time-domain full-covariance score up to numerical error.",
+    "exact_decomposition": "d_delta^2(c) = ||z||_2^2 = ||r||_2^2 up to numerical error.",
+    "multilead_fusion": "Lead-wise scores are fused by max-fusion and threshold is calibrated on validation fused scores."
+  }
+}

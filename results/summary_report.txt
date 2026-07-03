@@ -1,0 +1,31 @@
+ECG Walsh-Hadamard SaSiDa Reproducibility Summary
+==========================================================
+
+N: 128
+hop: 64
+fs: 100
+delta: 0.01
+alpha: 0.05
+L_train_reference_windows: 1836
+trace_scale: 0.31929215425393886
+condition_number: 783.2923350223382
+threshold_tau: 160.7290035911113
+window_auc: 0.04821799307958477
+record_auc_max: 0.009999999999999998
+record_auc_mean: 0.015000000000000003
+record_auc_q95: 0.015000000000000003
+max_invariance_error: 6.252776074688882e-13
+exact_decomposition_error: 6.394884621840902e-14
+orthogonality_error_WWT: 2.674969644124714e-16
+orthogonality_error_WTW: 2.674969644124714e-16
+
+Generated files:
+- README.md
+- fig_contribution_profile.png
+- fig_roc.png
+- fig_score_trace.png
+- fig_time_sequency.png
+- record_level_scores.csv
+- run_config.json
+- summary_metrics.csv
+- summary_report.txt

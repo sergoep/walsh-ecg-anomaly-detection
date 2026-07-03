@@ -1,0 +1,321 @@
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\geometry{left=22mm,right=22mm,top=22mm,bottom=22mm}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+
+\begin{document}
+
+\selectlanguage{russian}
+
+\begin{center}
+{\Large\bfseries Инструкция по финальной подготовке GitHub, Zenodo и отправке статьи}\\[4pt]
+{\large для рукописи по ECG Walsh--Hadamard anomaly scoring}\\[6pt]
+\end{center}
+
+\section*{1. Какую версию считать финальной}
+
+Финальной журнальной версией следует считать файл
+\[
+\texttt{ecg\_walsh\_sasida\_final\_top.tex}.
+\]
+Он объединяет две прежние линии работы:
+
+\begin{enumerate}[label=\arabic*)]
+\item компактную SaSiDa-версию без незаполненных таблиц;
+\item расширенную версию V4 с теорией sequency-block covariance, но без опасных \texttt{TBD}-результатов.
+\end{enumerate}
+
+Важное редакторское решение: все реальные численные результаты из быстрого Colab-пакета включены в статью только как \textbf{verification run}, то есть как проверка математических тождеств. Нельзя писать, что эти синтетические результаты доказывают медицинскую эффективность. В вашем запуске AUC получился около 0.048, поэтому его нельзя использовать как положительный результат. В статье он честно указан как неинтерпретируемый показатель синтетической label-separation, а главными численными результатами являются:
+\[
+\max |d^2_{\rm Walsh}-d^2_{\rm time}|<6.3\cdot 10^{-13},
+\]
+\[
+|d^2_\delta-\|r\|_2^2|<6.4\cdot 10^{-14},
+\]
+\[
+\|WW^\top-I\|_2<2.7\cdot 10^{-16}.
+\]
+
+\section*{2. Выбранный журнал Springer}
+
+Наиболее подходящий журнал:
+\[
+\textbf{Sampling Theory, Signal Processing, and Data Analysis}
+\]
+издательства Springer Nature.
+
+Почему именно он:
+\begin{enumerate}[label=\arabic*)]
+\item статья является математической работой по signal processing и data analysis;
+\item центральные результаты --- теоремы об ортогональной инвариантности, регуляризованном квадратичном операторе, точном разложении score и структурированных ковариациях;
+\item журнал принимает LaTeX-рукописи и использует Springer Nature template;
+\item медицинская часть статьи методологическая, а не клиническая, поэтому чисто биомедицинский журнал был бы рискованнее.
+\end{enumerate}
+
+\section*{3. Что положить в GitHub}
+
+Создайте или обновите репозиторий, например:
+\[
+\texttt{ecg-walsh-hadamard-anomaly-scoring}
+\]
+
+Рекомендуемая структура:
+
+\begin{verbatim}
+ecg-walsh-hadamard-anomaly-scoring/
+├── README.md
+├── LICENSE
+├── CITATION.cff
+├── requirements.txt
+├── run_colab_fast.py
+├── notebooks/
+│   └── ecg_walsh_hadamard_fast_demo.ipynb
+├── paper/
+│   ├── ecg_walsh_sasida_final_top.tex
+│   ├── fig_contribution_profile.png
+│   ├── fig_roc.png
+│   ├── fig_score_trace.png
+│   ├── fig_time_sequency.png
+│   └── springer_template_note.txt
+├── results/
+│   ├── summary_metrics.csv
+│   ├── record_level_scores.csv
+│   ├── run_config.json
+│   └── summary_report.txt
+└── archive/
+    └── ecg_walsh_hadamard_sasida_reproducibility_package.zip
+\end{verbatim}
+
+\subsection*{3.1 README.md}
+
+В README обязательно написать:
+
+\begin{verbatim}
+# Interpretable ECG Anomaly Scoring in Walsh-Hadamard Coordinates
+
+This repository accompanies the manuscript:
+
+"Interpretable ECG Anomaly Scoring in Sequency-Ordered
+Walsh-Hadamard Coordinates: Orthogonal Invariance,
+Exact Time-Domain Decomposition, and Block-Covariance Extensions"
+
+The current package provides a fast Colab verification run.
+It verifies the operator identities:
+1. full-covariance Walsh score equals time-domain Mahalanobis score;
+2. symmetric-whitening back-projection gives exact score decomposition;
+3. multilead max-fusion and empirical thresholding are reproducible.
+
+The synthetic run is not clinical validation.
+PTB-XL confirmation requires patient-wise splitting and clustered
+patient-level uncertainty analysis.
+\end{verbatim}
+
+\subsection*{3.2 requirements.txt}
+
+Минимальный файл:
+
+\begin{verbatim}
+numpy
+scipy
+scikit-learn
+matplotlib
+pandas
+wfdb
+\end{verbatim}
+
+Если вы не используете PTB-XL в быстром Colab-запуске, \texttt{wfdb} можно оставить как optional dependency.
+
+\subsection*{3.3 CITATION.cff}
+
+Создайте файл:
+
+\begin{verbatim}
+cff-version: 1.2.0
+title: "Interpretable ECG Anomaly Scoring in Walsh-Hadamard Coordinates"
+message: "If you use this software, please cite the archived Zenodo record."
+type: software
+authors:
+  - family-names: Episkoposian
+    given-names: Sergo A.
+  - family-names: Chaltikyan
+    given-names: Georgi
+repository-code: "https://github.com/USERNAME/ecg-walsh-hadamard-anomaly-scoring"
+doi: "10.5281/zenodo.18135575"
+license: MIT
+version: "1.0.0"
+date-released: "2026-07-03"
+\end{verbatim}
+
+Заменить \texttt{USERNAME} на ваш GitHub username.
+
+\subsection*{3.4 LICENSE}
+
+Лучше выбрать MIT License, если код свободный. Если хотите ограничить коммерческое использование, тогда Creative Commons для текста и отдельную лицензию для кода. Для журналов и Zenodo проще всего:
+\[
+\texttt{MIT License for code, CC-BY-4.0 for documentation and figures.}
+\]
+
+\section*{4. Что изменить в Zenodo}
+
+У вас уже указан DOI:
+\[
+\url{https://doi.org/10.5281/zenodo.18135575}.
+\]
+Нужно создать \textbf{новую версию} записи Zenodo, а не отдельный несвязанный DOI. Тогда сохранится concept DOI и появится version DOI.
+
+\subsection*{4.1 Название Zenodo record}
+
+Рекомендуемое название:
+
+\begin{quote}
+\textbf{Interpretable ECG Anomaly Scoring in Walsh--Hadamard Coordinates: Reproducibility Package}
+\end{quote}
+
+\subsection*{4.2 Описание Zenodo}
+
+В описание вставить:
+
+\begin{quote}
+This archive contains the reproducibility package for the manuscript ``Interpretable ECG Anomaly Scoring in Sequency-Ordered Walsh--Hadamard Coordinates: Orthogonal Invariance, Exact Time-Domain Decomposition, and Block-Covariance Extensions''. The package provides a fast Colab verification run for the closed-form Walsh--Hadamard anomaly-scoring operator, including orthogonal-invariance checks, exact time-domain score-decomposition checks, multilead max-fusion, threshold calibration, generated figures, run configuration, and CSV outputs. The synthetic run is intended to verify the mathematical and computational pipeline; it is not clinical validation.
+\end{quote}
+
+\subsection*{4.3 Файлы для Zenodo}
+
+Загрузить:
+
+\begin{verbatim}
+ecg_walsh_hadamard_sasida_reproducibility_package.zip
+ecg_walsh_sasida_final_top.tex
+summary_metrics.csv
+record_level_scores.csv
+run_config.json
+fig_contribution_profile.png
+fig_score_trace.png
+fig_time_sequency.png
+fig_roc.png
+README.md
+requirements.txt
+CITATION.cff
+LICENSE
+\end{verbatim}
+
+\subsection*{4.4 Keywords для Zenodo}
+
+\begin{verbatim}
+Walsh-Hadamard transform
+ECG anomaly scoring
+sequency ordering
+Mahalanobis distance
+orthogonal invariance
+interpretable signal processing
+time-domain attribution
+covariance regularization
+\end{verbatim}
+
+\section*{5. Что отправлять в Springer}
+
+Для SaSiDa / Springer загрузить:
+
+\begin{enumerate}[label=\arabic*)]
+\item \texttt{ecg\_walsh\_sasida\_final\_top.tex};
+\item PDF, собранный из этого файла;
+\item все рисунки:
+\begin{verbatim}
+fig_contribution_profile.png
+fig_score_trace.png
+fig_time_sequency.png
+fig_roc.png
+\end{verbatim}
+\item \texttt{sn-jnl.cls} и нужные файлы Springer Nature template, если система просит source package;
+\item cover letter;
+\item optional: zip с кодом или ссылку на Zenodo/GitHub.
+\end{enumerate}
+
+\section*{6. Cover letter: короткая версия}
+
+\begin{verbatim}
+Dear Editor,
+
+We submit the manuscript entitled "Interpretable ECG Anomaly
+Scoring in Sequency-Ordered Walsh-Hadamard Coordinates:
+Orthogonal Invariance, Exact Time-Domain Decomposition, and
+Block-Covariance Extensions" for consideration in Sampling Theory,
+Signal Processing, and Data Analysis.
+
+The paper develops a mathematically explicit anomaly-scoring
+operator for ECG windows in Walsh-Hadamard coordinates. The main
+results prove orthogonal invariance of the full-covariance
+regularized Mahalanobis score and an exact time-domain score
+decomposition obtained by symmetric whitening and inverse
+orthonormal back-projection. The paper also formulates
+sequency-block covariance models as a principled Walsh-specific
+extension.
+
+The study is methodological and does not make clinical diagnostic
+claims. The accompanying reproducibility package verifies the
+operator identities and provides generated figures, run
+configuration, and numerical checks.
+
+The manuscript is original, has not been published elsewhere, and
+is not under consideration by another journal.
+
+Sincerely,
+Sergo A. Episkoposian
+\end{verbatim}
+
+\section*{7. Проверка библиографии}
+
+Все источники из финальной рукописи цитируются в тексте. DOI указаны там, где они есть и где это уместно. Для книги Anderson DOI не указан, потому что это стандартная монография Wiley без обязательного DOI в библиографии. Остальные DOI в рукописи:
+
+\begin{center}
+\small
+\begin{tabular}{p{0.31\textwidth}p{0.51\textwidth}}
+\toprule
+Источник & DOI / ссылка\\
+\midrule
+Hotelling 1931 & \url{10.1214/aoms/1177732979}\\
+Ledoit--Wolf 2004 & \url{10.1016/S0047-259X(03)00096-4}\\
+Mallat 2008 & \url{10.1016/B978-0-12-374370-1.X0001-8}\\
+Addison 2005 & \url{10.1088/0967-3334/26/5/R01}\\
+Pan--Tompkins 1985 & \url{10.1109/TBME.1985.325532}\\
+PTB-XL 2020 & \url{10.1038/s41597-020-0495-6}\\
+Strodthoff 2021 & \url{10.1109/JBHI.2020.3022989}\\
+Ribeiro 2020 & \url{10.1038/s41467-020-15432-4}\\
+Hannun 2019 & \url{10.1038/s41591-018-0268-3}\\
+Chandola 2009 & \url{10.1145/1541880.1541882}\\
+Pimentel 2014 & \url{10.1016/j.sigpro.2013.12.026}\\
+Scholkopf 2001 & \url{10.1162/089976601750264965}\\
+Liu 2008 & \url{10.1109/ICDM.2008.17}\\
+Manz 1972 & \url{10.1109/TAU.1972.1162377}\\
+Horadam 2007 & \url{10.1515/9781400842902}\\
+PhysioNet 2000 & \url{10.1161/01.CIR.101.23.e215}\\
+McSharry 2003 & \url{10.1109/TBME.2003.808805}\\
+Muirhead 1982 & \url{10.1002/9780470316559}\\
+Rudin 2019 & \url{10.1038/s42256-019-0048-x}\\
+Zenodo package & \url{10.5281/zenodo.18135575}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{8. Самое важное перед отправкой}
+
+\begin{enumerate}[label=\arabic*)]
+\item Не заявлять, что синтетический Colab-запуск доказывает эффективность detection.
+\item Не заявлять Walsh-specific superiority для full covariance.
+\item В статье оставлена сильная и честная позиция: full covariance invariant; exact decomposition proven; block covariance is the Walsh-specific extension.
+\item Если хотите сделать статью существенно сильнее эмпирически, нужно отдельно прогнать PTB-XL с patient-wise split и заполнить ablation для Walsh diagonal / Walsh block / Ledoit--Wolf / wavelet / isolation forest.
+\item Для текущей отправки в SaSiDa лучше подавать как математико-методологическую статью с reproducibility verification.
+\end{enumerate}
+
+\end{document}
