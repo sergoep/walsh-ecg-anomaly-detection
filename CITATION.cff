@@ -10,9 +10,9 @@ authors:
 abstract: "Reference implementation for interpretable ECG anomaly scoring in sequency-ordered Walsh-Hadamard coordinates, including orthogonal-invariance and exact-decomposition verification."
 repository-code: "https://github.com/sergoep/ecg-walsh-hadamard-sasida"
 repository-artifact: "https://doi.org/10.5281/zenodo.18135575"
-doi: 10.5281/zenodo.18135575
+doi: 10.5281/zenodo.21179510
 license: MIT
-version: "1.0.1"
+version: "v3"
 date-released: "2026-07-03"
 keywords:
   - Walsh-Hadamard transform
