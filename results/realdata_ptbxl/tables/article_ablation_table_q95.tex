@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Real-data PTB-XL record-level ablation under patient-wise stratified folds. The reference class is NORM and the positive out-of-reference class is non-NORM.}
+\label{tab:ptbxl-real-ablation}
+\begin{tabular}{llllllllll}
+\hline
+Model & Aggregation & Records & Non-NORM & NORM & AUC & AUPRC & TPR@5\%FPR & Sensitivity & Specificity \\
+\hline
+time_full & q95 & 400 & 200 & 200 & 0.4443 & 0.4720 & 0.0500 & 0.0800 & 0.8850 \\
+walsh_full & q95 & 400 & 200 & 200 & 0.4443 & 0.4720 & 0.0500 & 0.0800 & 0.8850 \\
+walsh_diag & q95 & 400 & 200 & 200 & 0.4537 & 0.4854 & 0.0450 & 0.0900 & 0.8950 \\
+walsh_block & q95 & 400 & 200 & 200 & 0.4616 & 0.4853 & 0.0400 & 0.0800 & 0.8900 \\
+isolation_forest_walsh & q95 & 400 & 200 & 200 & 0.4280 & 0.4647 & 0.0300 & 0.0850 & 0.9050 \\
+\hline
+\end{tabular}
+\end{table}

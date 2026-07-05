@@ -1,0 +1,21 @@
+Real-data PTB-XL protocol.
+
+The real-data evaluation used PTB-XL version 1.0.3 low-resolution records
+sampled at 100 Hz. Records with diagnostic superclass exactly NORM were used
+as the healthy reference class. Records with at least one non-NORM diagnostic
+superclass were used as out-of-reference test records. The official PTB-XL
+stratified folds were used: folds 1--8 for reference estimation, fold 9 for
+threshold calibration, and fold 10 for final testing. The selected leads were:
+I, II, V2.
+
+Signals were bandpass filtered in the 0.5--40 Hz range and
+robustly normalized per record and lead. Each signal was segmented into
+windows of length N=128 samples with hop 64 samples. The regularization
+parameter was delta=0.01, and the validation threshold was calibrated
+at alpha=0.05 on held-out NORM windows.
+
+The evaluated models were: time-domain full covariance, Walsh-domain full
+covariance, Walsh diagonal covariance, Walsh sequency-block covariance with
+blocks [(0, 8), (8, 32), (32, 64), (64, 128)], and Isolation Forest on concatenated Walsh coefficients
+when enabled. Record-level scores were obtained by max, mean, and 95th
+percentile aggregation over window-level multilead max-fusion scores.

@@ -1,0 +1,6 @@
+Quantity,Observed value
+||W W^T - I||_2,2.674969644124714e-16
+||W^T W - I||_2,2.674969644124714e-16
+Max Walsh/time-domain score discrepancy,1.0970779840135947e-11
+Max full-covariance decomposition error,1.3642420526593924e-12
+Max block-covariance decomposition error,3.410605131648481e-13

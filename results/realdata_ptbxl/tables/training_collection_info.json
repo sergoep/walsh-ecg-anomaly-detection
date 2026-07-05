@@ -1,0 +1,15 @@
+{
+  "total_training_records": 300,
+  "total_training_windows": 4200,
+  "failed_training_records": 0,
+  "selected_leads": [
+    "I",
+    "II",
+    "V2"
+  ],
+  "windows_per_lead": {
+    "I": 4200,
+    "II": 4200,
+    "V2": 4200
+  }
+}

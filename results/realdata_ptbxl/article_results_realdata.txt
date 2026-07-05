@@ -1,0 +1,17 @@
+Real-data PTB-XL results.
+
+The evaluation used 300 NORM training records,
+100 NORM validation records, 200 NORM test
+records, and 200 non-NORM test records. The maximum observed
+Walsh/time-domain full-covariance score discrepancy was
+1.097e-11. The maximum exact
+decomposition errors were 1.364e-12
+for the full-covariance Walsh model and
+3.411e-13 for the block
+Walsh model. These values confirm the operator identities on real PTB-XL
+windows.
+
+Using q95 record-level aggregation, the best observed model in this run was
+walsh_block, with ROC-AUC=0.4616 and AUPRC=0.4853. The full
+ablation table is saved in tables/article_ablation_table_q95.csv and
+tables/article_ablation_table_q95.tex.

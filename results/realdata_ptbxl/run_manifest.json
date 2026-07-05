@@ -1,0 +1,91 @@
+{
+  "title": "Real-data PTB-XL evaluation for Walsh-Hadamard ECG anomaly scoring",
+  "article_title": "Interpretable ECG Anomaly Scoring in Walsh-Hadamard Coordinates: Orthogonal Invariance and Exact Time-Domain Score Decomposition",
+  "random_seed": 20260705,
+  "physionet_database": "PTB-XL",
+  "physionet_version": "1.0.3",
+  "pn_dir": "ptb-xl/1.0.3",
+  "sampling_rate_hz": 100,
+  "bandpass_hz": [
+    0.5,
+    40.0
+  ],
+  "window_length": 128,
+  "hop": 64,
+  "overlap_percent": 50.0,
+  "delta": 0.01,
+  "alpha": 0.05,
+  "selected_leads": [
+    "I",
+    "II",
+    "V2"
+  ],
+  "blocks": [
+    [
+      0,
+      8
+    ],
+    [
+      8,
+      32
+    ],
+    [
+      32,
+      64
+    ],
+    [
+      64,
+      128
+    ]
+  ],
+  "max_train_norm_records": 300,
+  "max_val_norm_records": 100,
+  "max_test_norm_records": 200,
+  "max_test_abn_records": 200,
+  "models": [
+    "time_full",
+    "walsh_full",
+    "walsh_diag",
+    "walsh_block",
+    "isolation_forest_walsh"
+  ],
+  "elapsed_fit_seconds": 189.84061646461487,
+  "failed_eval_records": 0,
+  "verification": {
+    "random_seed": 20260705,
+    "N": 128,
+    "hop": 64,
+    "delta": 0.01,
+    "alpha": 0.05,
+    "selected_leads": [
+      "I",
+      "II",
+      "V2"
+    ],
+    "walsh_orthogonality_error_left_2norm": 2.674969644124714e-16,
+    "walsh_orthogonality_error_right_2norm": 2.674969644124714e-16,
+    "max_walsh_time_score_discrepancy": 1.0970779840135947e-11,
+    "max_full_exact_decomposition_error": 1.3642420526593924e-12,
+    "max_block_exact_decomposition_error": 3.410605131648481e-13,
+    "verified_records": 50,
+    "verified_windows": 700
+  },
+  "outputs": {
+    "split_summary": "walsh_ecg_realdata_results/tables/ptbxl_split_summary.csv",
+    "training_collection_info": "walsh_ecg_realdata_results/tables/training_collection_info.json",
+    "fit_summary": "walsh_ecg_realdata_results/tables/reference_model_fit_summary.csv",
+    "validation_thresholds": "walsh_ecg_realdata_results/tables/validation_thresholds.csv",
+    "record_scores": "walsh_ecg_realdata_results/tables/record_scores_all_models.csv",
+    "record_level_metrics": "walsh_ecg_realdata_results/tables/record_level_metrics.csv",
+    "article_ablation_table_csv": "walsh_ecg_realdata_results/tables/article_ablation_table_q95.csv",
+    "article_ablation_table_tex": "walsh_ecg_realdata_results/tables/article_ablation_table_q95.tex",
+    "article_verification_table_csv": "walsh_ecg_realdata_results/tables/article_verification_table.csv",
+    "article_verification_table_tex": "walsh_ecg_realdata_results/tables/article_verification_table.tex",
+    "figures": "walsh_ecg_realdata_results/figures"
+  },
+  "recommended_citations": [
+    "Wagner et al., PTB-XL, Scientific Data 2020, DOI: 10.1038/s41597-020-0495-6",
+    "Goldberger et al., PhysioNet, Circulation 2000, DOI: 10.1161/01.CIR.101.23.e215",
+    "McSharry et al., synthetic ECG model, IEEE TBME 2003, DOI: 10.1109/TBME.2003.808805"
+  ]
+}

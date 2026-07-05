@@ -1,0 +1,19 @@
+{
+  "random_seed": 20260705,
+  "N": 128,
+  "hop": 64,
+  "delta": 0.01,
+  "alpha": 0.05,
+  "selected_leads": [
+    "I",
+    "II",
+    "V2"
+  ],
+  "walsh_orthogonality_error_left_2norm": 2.674969644124714e-16,
+  "walsh_orthogonality_error_right_2norm": 2.674969644124714e-16,
+  "max_walsh_time_score_discrepancy": 1.0970779840135947e-11,
+  "max_full_exact_decomposition_error": 1.3642420526593924e-12,
+  "max_block_exact_decomposition_error": 3.410605131648481e-13,
+  "verified_records": 50,
+  "verified_windows": 700
+}
