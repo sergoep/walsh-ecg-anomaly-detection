@@ -1,22 +1,59 @@
 cff-version: 1.2.0
-title: "Interpretable ECG Anomaly Scoring in Walsh-Hadamard Coordinates: Orthogonal Invariance and Exact Time-Domain Score Decomposition"
-message: "If you use this software or reproducibility package, please cite the archived Zenodo version and the associated manuscript."
-type: software
-authors:
-  - family-names: Episkoposian
-    given-names: Sergo A.
-  - family-names: Chaltikyan
-    given-names: Georgi
-version: "1.1.0"
+message: "If you use this software or reproducibility package, please cite it using the metadata below."
+title: "Walsh-Hadamard ECG anomaly scoring: reproducibility package with PTB-XL real-data pilot"
+version: "v1.1.0"
+doi: "10.5281/zenodo.21209846"
 date-released: "2026-07-05"
-doi: "TO_BE_REPLACED_AFTER_ZENODO_NEW_VERSION"
-url: "https://github.com/sergoep/walsh-ecg-anomaly-detection"
+type: software
+
+authors:
+  - family-names: "Episkoposian"
+    given-names: "Sergo A."
+    affiliation: "National Polytechnic University of Armenia"
+  - family-names: "Chaltikyan"
+    given-names: "Georgi"
+    affiliation: "Deggendorf Institute of Technology"
+
+repository-code: "https://github.com/sergoep/walsh-ecg-anomaly-detection"
+url: "https://zenodo.org/records/21209846"
+license: "MIT"
+
+abstract: >
+  Public reproducibility package for the Walsh-Hadamard ECG anomaly-scoring study.
+  This version adds a real-data PTB-XL pilot layer to the previous synthetic
+  verification package. It includes code, a Colab notebook, real-data PTB-XL
+  pilot outputs, tables, figures, operator-identity verification files, and run
+  metadata. The manuscript itself is not included in this public archive because
+  it is under journal submission. The PTB-XL pilot is intended as methodological
+  real-data verification and stress testing of the Walsh-Hadamard quadratic
+  reference operator; it is not claimed as clinical diagnostic validation.
+
 keywords:
-  - Walsh-Hadamard transform
-  - ECG
-  - PTB-XL
-  - Mahalanobis distance
-  - orthogonal invariance
-  - signal processing
-  - anomaly scoring
-  - interpretability
+  - "Walsh-Hadamard transform"
+  - "Walsh functions"
+  - "Hadamard matrix"
+  - "sequency ordering"
+  - "ECG"
+  - "PTB-XL"
+  - "Mahalanobis distance"
+  - "orthogonal invariance"
+  - "exact decomposition"
+  - "signal processing"
+  - "anomaly scoring"
+  - "interpretable machine learning"
+  - "reproducibility"
+
+preferred-citation:
+  type: software
+  title: "Walsh-Hadamard ECG anomaly scoring: reproducibility package with PTB-XL real-data pilot"
+  authors:
+    - family-names: "Episkoposian"
+      given-names: "Sergo A."
+      affiliation: "National Polytechnic University of Armenia"
+    - family-names: "Chaltikyan"
+      given-names: "Georgi"
+      affiliation: "Deggendorf Institute of Technology"
+  doi: "10.5281/zenodo.21209846"
+  date-released: "2026-07-05"
+  version: "v1.1.0"
+  url: "https://zenodo.org/records/21209846"
