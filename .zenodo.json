@@ -1,39 +1,50 @@
 {
-  "title": "Walsh-Domain Reference-Based ECG Anomaly Detection: Reproducible Code and Verification Package",
+  "title": "Walsh-Hadamard ECG anomaly scoring: reproducibility package with PTB-XL real-data pilot",
   "upload_type": "software",
-  "description": "Reference implementation and reproducibility package for the manuscript 'Interpretable ECG Anomaly Scoring in Walsh-Hadamard Coordinates: Orthogonal Invariance and Exact Time-Domain Score Decomposition'. The package verifies orthogonal invariance, exact detector-relative score decomposition, multilead max-fusion, and the associated reproducibility workflow. The synthetic verification run is intended for methodological verification and does not claim clinical validation.",
+  "description": "Public reproducibility package for the Walsh-Hadamard ECG anomaly-scoring study. This version adds a real-data PTB-XL pilot layer to the previous synthetic verification package. It includes code, a Colab notebook, real-data PTB-XL pilot outputs, tables, figures, operator-identity verification files, and run metadata. The manuscript itself is not included in this public archive because it is under journal submission. The PTB-XL pilot is intended as methodological real-data verification and stress testing of the Walsh-Hadamard quadratic reference operator; it is not claimed as clinical diagnostic validation.",
   "creators": [
     {
       "name": "Episkoposian, Sergo A.",
-      "affiliation": "Faculty of Applied Mathematics and Physics, National Polytechnic University of Armenia, Yerevan, Armenia"
+      "affiliation": "National Polytechnic University of Armenia"
     },
     {
       "name": "Chaltikyan, Georgi",
-      "affiliation": "Deggendorf Institute of Technology, European Campus Rottal-Inn (DIT-ECRI), Pfarrkirchen, Germany"
+      "affiliation": "Deggendorf Institute of Technology"
     }
   ],
   "license": "MIT",
   "keywords": [
     "Walsh-Hadamard transform",
-    "ECG anomaly scoring",
-    "orthogonal invariance",
+    "Walsh functions",
+    "Hadamard matrix",
+    "sequency ordering",
+    "ECG",
+    "PTB-XL",
     "Mahalanobis distance",
+    "orthogonal invariance",
+    "exact decomposition",
     "signal processing",
-    "reproducibility",
-    "interpretable anomaly detection"
+    "anomaly scoring",
+    "interpretable machine learning",
+    "reproducibility"
   ],
+  "version": "v1.1.0",
+  "language": "eng",
   "related_identifiers": [
     {
-      "identifier": "https://doi.org/10.5281/zenodo.18135574",
-      "relation": "isVersionOf",
-      "scheme": "doi"
+      "identifier": "https://github.com/sergoep/walsh-ecg-anomaly-detection",
+      "relation": "isDocumentedBy",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/sergoep/walsh-ecg-anomaly-detection/releases/tag/v1.1.0-ptbxl-realdata",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
     },
     {
       "identifier": "https://doi.org/10.5281/zenodo.21179510",
-      "relation": "isIdenticalTo",
-      "scheme": "doi"
+      "relation": "isNewVersionOf",
+      "resource_type": "software"
     }
-  ],
-  "version": "v3",
-  "publication_date": "2026-07-03"
+  ]
 }
