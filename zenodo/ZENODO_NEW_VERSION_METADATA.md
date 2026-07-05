@@ -1,42 +1,83 @@
-# Zenodo New Version metadata
-
-Use **New version** from the existing Zenodo record, not a completely separate record.
+# Zenodo metadata for v1.1.0
 
 ## Title
 
-Interpretable ECG Anomaly Scoring in Walsh-Hadamard Coordinates: Orthogonal Invariance, Exact Time-Domain Score Decomposition, and PTB-XL Real-Data Pilot
+Walsh-Hadamard ECG anomaly scoring: reproducibility package with PTB-XL real-data pilot
 
 ## Version
 
-v1.1.0 / Version 4
+v1.1.0
+
+## Resource type
+
+Software
+
+## Publication date
+
+2026-07-05
+
+## Repository
+
+https://github.com/sergoep/walsh-ecg-anomaly-detection
+
+## GitHub release
+
+https://github.com/sergoep/walsh-ecg-anomaly-detection/releases/tag/v1.1.0-ptbxl-realdata
+
+## Zenodo record
+
+https://zenodo.org/records/21209846
+
+## Zenodo DOI
+
+https://doi.org/10.5281/zenodo.21209846
+
+## Latest all-versions Zenodo DOI
+
+https://doi.org/10.5281/zenodo.18135574
+
+## Previous version
+
+https://doi.org/10.5281/zenodo.21179510
 
 ## Description
 
-This version extends the previous synthetic verification package by adding a real-data PTB-XL pilot evaluation under a patient/fold-wise protocol. The real-data outputs include PTB-XL split summaries, reference-model diagnostics, record-level ablation metrics, operator-identity verification tables, ROC/PR figures, contribution overlays, and a Signal Processing submission manuscript package.
+This archive is the public reproducibility package for the Walsh-Hadamard ECG anomaly-scoring study.
+
+This version adds a real-data PTB-XL pilot layer to the previous synthetic verification package. It includes code, a Colab notebook, real-data PTB-XL pilot outputs, tables, figures, operator-identity verification files, and run metadata.
+
+The package contains:
+
+- PTB-XL real-data evaluation script;
+- Colab notebook;
+- patient/fold-wise PTB-XL pilot outputs;
+- real-data tables and figures;
+- orthogonal-invariance and exact-decomposition verification tables;
+- run manifest;
+- updated README, CITATION.cff, and requirements.
+
+The manuscript itself is not included in this public archive. The corresponding manuscript is under journal submission.
 
 The PTB-XL pilot is intended as methodological real-data verification and stress testing of the Walsh-Hadamard quadratic reference operator. It is not claimed as clinical diagnostic validation.
 
 ## Keywords
 
 - Walsh-Hadamard transform
+- Walsh functions
+- Hadamard matrix
+- sequency ordering
 - ECG
 - PTB-XL
 - Mahalanobis distance
 - orthogonal invariance
+- exact decomposition
 - signal processing
 - anomaly scoring
-- interpretable signal processing
+- interpretable machine learning
+- reproducibility
 
-## Related identifiers
+## Recommended citation
 
-- isNewVersionOf: 10.5281/zenodo.21179510
-- isSupplementTo: https://github.com/sergoep/walsh-ecg-anomaly-detection
-
-## Files to upload
-
-Upload the GitHub/Colab update package and the final Signal Processing package:
-
-```text
-github_colab_update_v1_1_0.zip
-signal_processing_ecg_walsh_realdata_final_package.zip
-```
+Episkoposian, S. A., & Chaltikyan, G. (2026).  
+Walsh-Hadamard ECG anomaly scoring: reproducibility package with PTB-XL real-data pilot.  
+Zenodo. https://doi.org/10.5281/zenodo.21209846
