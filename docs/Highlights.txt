@@ -1,0 +1,7 @@
+Highlights
+
+• Full-covariance Walsh ECG scores are orthogonally invariant.
+• Symmetric whitening gives exact time-domain score decomposition.
+• Sequency-block covariance creates a Walsh-specific detector geometry.
+• A PTB-XL pilot verifies the identities on public ECG records.
+• Real-data ablation separates detector geometry from clinical validation.

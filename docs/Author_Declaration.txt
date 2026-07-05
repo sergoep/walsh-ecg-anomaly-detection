@@ -1,0 +1,33 @@
+Author Declaration
+
+Manuscript title:
+Interpretable ECG Anomaly Scoring in Walsh–Hadamard Coordinates: Orthogonal Invariance and Exact Time-Domain Score Decomposition
+
+Journal:
+Signal Processing
+
+Originality and submission status:
+The authors confirm that the manuscript is original, has not been published previously, and is not under consideration by another journal.
+
+Funding:
+The authors declare that no funds, grants, or other support were received during the preparation of this manuscript.
+
+Competing interests:
+The authors declare that they have no competing interests.
+
+Ethics approval:
+Not applicable. This study uses publicly available, de-identified ECG data and synthetic verification data and does not involve new human-participant recruitment or intervention.
+
+Consent to participate:
+Not applicable.
+
+Author contributions:
+Sergo A. Episkoposian: conceptualization, mathematical formulation, methodology, software, formal analysis, visualization, and writing.
+Georgi Chaltikyan: biomedical interpretation, methodological validation, review, and editing.
+Both authors read and approved the final manuscript.
+
+Data and code availability:
+The reference implementation and reproducibility package are archived on Zenodo at https://doi.org/10.5281/zenodo.18135574. The version corresponding to this manuscript is Version 3, available at https://doi.org/10.5281/zenodo.21179510. The public GitHub repository is available at https://github.com/sergoep/walsh-ecg-anomaly-detection. The PTB-XL dataset discussed in the manuscript is publicly available through PhysioNet and is cited in the references.
+
+Generative AI declaration:
+During the preparation of this work, AI-assisted tools were used for language refinement, editorial polishing, consistency checking, and preparation of reproducibility instructions. After using these tools, the authors reviewed and edited the content as needed and take full responsibility for the content of the manuscript.

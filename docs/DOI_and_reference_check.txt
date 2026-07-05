@@ -1,0 +1,38 @@
+DOI and reference consistency check
+
+This file records the final editorial check performed on the references.
+
+Checks performed:
+- All bibliography entries are cited in the manuscript.
+- All citation keys used in the manuscript are present in the bibliography.
+- DOI links are written in resolvable https://doi.org/... form where DOI data are available.
+- Book references without a DOI are retained as standard bibliographic entries.
+
+DOI links present in the manuscript:
+- https://doi.org/10.5281/zenodo.18135574
+- https://doi.org/10.5281/zenodo.21179510
+- https://doi.org/10.1088/0967-3334/26/5/R01
+- https://doi.org/10.1145/1541880.1541882
+- https://doi.org/10.5281/zenodo.21179510
+- https://doi.org/10.1161/01.CIR.101.23.e215
+- https://doi.org/10.1038/s41591-018-0268-3
+- https://doi.org/10.1515/9781400842902
+- https://doi.org/10.1214/aoms/1177732979
+- https://doi.org/10.1016/S0047-259X(03)00096-4
+- https://doi.org/10.1109/ICDM.2008.17
+- https://doi.org/10.1016/B978-0-12-374370-1.X0001-8
+- https://doi.org/10.1109/TAU.1972.1162377
+- https://doi.org/10.1109/TBME.2003.808805
+- https://doi.org/10.1002/9780470316559
+- https://doi.org/10.1109/TBME.1985.325532
+- https://doi.org/10.1016/j.sigpro.2013.12.026
+- https://doi.org/10.1038/s41467-020-15432-4
+- https://doi.org/10.1038/s42256-019-0048-x
+- https://doi.org/10.1162/089976601750264965
+- https://doi.org/10.1109/JBHI.2020.3022989
+- https://doi.org/10.1038/s41597-020-0495-6
+
+Notes:
+- Anderson (2003) is a standard book reference and has no DOI in the manuscript.
+- The Zenodo Version 3 software archive is cited as a dataset/software reference.
+- The latest Zenodo DOI and the version-specific DOI are both retained in the Code and data availability section.

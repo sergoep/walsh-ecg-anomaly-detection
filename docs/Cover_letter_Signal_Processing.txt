@@ -1,0 +1,22 @@
+Dear Editor-in-Chief,
+
+We submit the manuscript entitled “Interpretable ECG Anomaly Scoring in Walsh–Hadamard Coordinates: Orthogonal Invariance and Exact Time-Domain Score Decomposition” for consideration as an Original Research Article in Signal Processing.
+
+The manuscript develops a methodological signal-processing framework for reference-based waveform scoring in sequency-ordered Walsh–Hadamard coordinates, using ECG windows as a structured physiological signal setting. The central question is when a transform-domain quadratic detector genuinely uses the transform and when it is only a coordinate rewrite. The paper proves that full-covariance Mahalanobis-type scoring with isotropic trace-scaled regularization is invariant under every orthonormal coordinate change. Therefore, the full-covariance Walsh–Hadamard score is exactly equivalent to the corresponding time-domain score.
+
+The manuscript further derives an exact time-domain score decomposition by symmetric whitening and inverse orthonormal back-projection, and introduces sequency-block covariance scoring as a Walsh-specific structured extension that preserves exact decomposition while breaking full orthogonal invariance. To make the empirical implications explicit, the revised manuscript includes a competitive ablation design contrasting time-domain full covariance, Walsh full covariance, Walsh diagonal covariance, Walsh sequency-block covariance, classical transform-domain Mahalanobis scores, and generic anomaly-detection baselines. It also reports a real-data PTB-XL pilot on public ECG records. The pilot confirms the orthogonal-invariance and exact-decomposition identities at floating-point scale and transparently shows that the unoptimized nominal reference score should not be interpreted as a clinical diagnostic classifier. These additions clarify which comparisons are algebraically redundant, which ones are scientifically meaningful, and where the method's current applied limitations are.
+
+The work is aligned with the scope of Signal Processing because it contributes to statistical signal processing, detection and estimation, spectral/signal representation analysis, structured covariance modeling, and biomedical signal processing. The ECG component is used as a structured waveform setting for methodological verification and illustration; the manuscript does not make clinical diagnostic claims.
+
+A reproducibility package is archived on Zenodo. The latest software record is available at https://doi.org/10.5281/zenodo.18135574, and the version corresponding to this manuscript is Version 3 at https://doi.org/10.5281/zenodo.21179510. The public GitHub repository is available at https://github.com/sergoep/walsh-ecg-anomaly-detection.
+
+The manuscript is original, is not under consideration elsewhere, and all authors have approved its submission. The authors declare no competing interests.
+
+Sincerely,
+
+Sergo A. Episkoposian
+Corresponding author
+Faculty of Applied Mathematics and Physics
+National Polytechnic University of Armenia
+Yerevan, Armenia
+Email: sergo.episkoposyan@polytechnic.am
